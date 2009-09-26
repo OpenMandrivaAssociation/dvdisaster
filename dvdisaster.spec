@@ -1,13 +1,13 @@
 Summary:	Securely store data on DVD/CD media
 Name:		dvdisaster
 Version:	0.72.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2
 Group:		Archiving/Backup
 URL:		http://dvdisaster.net/
 Source0:		http://dvdisaster.net/downloads/%{name}-%{version}.tar.bz2
-Requires:	libgtk+, gettext, libglib2, pango, libgtk+2.0
-BuildRequires:	gcc, make, libgtk+-devel, bash, fileutils, textutils, gettext-devel, pkgconfig, libglib2-devel, pango-devel, libgtk+2.0-devel
+Requires:	gettext, libglib2, pango, libgtk+2.0
+BuildRequires:	gcc, make, bash, fileutils, textutils, gettext-devel, pkgconfig, libglib2-devel, pango-devel, libgtk+2.0-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 
 %description
