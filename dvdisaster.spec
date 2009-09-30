@@ -6,8 +6,8 @@ License:	GPLv2
 Group:		Archiving/Backup
 URL:		http://dvdisaster.net/
 Source0:		http://dvdisaster.net/downloads/%{name}-%{version}.tar.bz2
-Requires:	gettext, libglib2, pango, libgtk+2.0
-BuildRequires:	gcc, make, bash, fileutils, textutils, gettext-devel, pkgconfig, libglib2-devel, pango-devel, libgtk+2.0-devel
+Requires:	gettext, libglib2, pango, libgtk+2.0, libbzip2
+BuildRequires:	gcc, make, bash, fileutils, textutils, gettext-devel, pkgconfig, libglib2-devel, pango-devel, libgtk+2.0-devel,  libbzip2-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 
 %description
