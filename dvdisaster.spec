@@ -1,14 +1,18 @@
 Summary:	Securely store data on DVD/CD media
 Name:		dvdisaster
 Version:	0.72.1
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2
 Group:		Archiving/Backup
 URL:		http://dvdisaster.net/
 Source0:		http://dvdisaster.net/downloads/%{name}-%{version}.tar.bz2
-Requires:	gettext, libglib2, pango, libgtk+2.0, libbzip2
-BuildRequires:	gcc, make, bash, fileutils, textutils, gettext-devel, pkgconfig, libglib2-devel, pango-devel, libgtk+2.0-devel,  libbzip2-devel
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
+Patch:          dvdisaster-0.72.1-fix-format-errors.patch
+BuildRequires:	gettext-devel
+BuildRequires:	libglib2-devel
+BuildRequires:	pango-devel
+BuildRequires:	libgtk+2.0-devel
+BuildRequires:	libbzip2-devel
+BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 dvdisaster is a way to securely store data on DVD/CD media.
@@ -23,15 +27,21 @@ Data loss is prevented by using error correcting codes. Error correction data is
 
 %prep
 %setup -q
+%patch -p 1
 
 %build
-export CFLAGS="-O2 -g -pipe -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DFILE_OFFSET_BITS=64"
-%configure --buildroot=%{buildroot} --localedir=%{_datadir}/locale --docdir=%{_datadir}/doc --docsubdir=%{name}
-make #%{?_smp_mflags}
+#export CFLAGS="-O2 -g -pipe -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DFILE_OFFSET_BITS=64"
+./configure \
+    --prefix=%{_prefix} \
+    --buildroot=%{buildroot} \
+    --mandir=%{_mandir} \
+    --localedir=%{_datadir}/locale \
+    --docdir=%{_datadir}/doc \
+    --docsubdir=%{name}
+%__make CFLAGS="%{optflags}"
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean 
