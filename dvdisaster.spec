@@ -1,7 +1,7 @@
 Summary:	Securely store data on DVD/CD media
 Name:		dvdisaster
 Version:	0.72.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2
 Group:		Archiving/Backup
 URL:		http://dvdisaster.net/
