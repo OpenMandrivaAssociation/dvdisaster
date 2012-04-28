@@ -8,7 +8,7 @@ URL:		http://dvdisaster.net/
 Source0:	http://dvdisaster.net/downloads/%{name}-%{version}.tar.bz2
 Patch0:          dvdisaster-0.72.1-fix-format-errors.patch
 BuildRequires:	gettext-devel
-BuildRequires:	libglib2-devel
+BuildRequires:	glib2-devel
 BuildRequires:	pango-devel
 BuildRequires:	libgtk+2.0-devel
 BuildRequires:	libbzip2-devel
