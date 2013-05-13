@@ -10,7 +10,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	libglib2-devel
 BuildRequires:	pango-devel
 BuildRequires:	libgtk+2.0-devel
-BuildRequires:	libbzip2-devel
+BuildRequires:	bzip2-devel = 1.0.6-8
 
 %description
 
