@@ -7,9 +7,9 @@ Group:		Archiving/Backup
 URL:		http://dvdisaster.net/
 Source0:	http://dvdisaster.net/downloads/%{name}-%{version}.tar.bz2
 BuildRequires:	gettext-devel
-BuildRequires:	libglib2-devel
+BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pango-devel
-BuildRequires:	libgtk+2.0-devel
+BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	bzip2-devel = 1.0.6-8
 
 %description
