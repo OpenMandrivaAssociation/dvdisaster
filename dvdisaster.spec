@@ -1,7 +1,7 @@
 Summary:	Securely store data on DVD/CD media
 Name:		dvdisaster
-Version:	0.72.4
-Release:	2
+Version:	0.79.3
+Release:	1
 License:	GPLv2
 Group:		Archiving/Backup
 URL:		http://dvdisaster.net/
@@ -50,10 +50,10 @@ The maximum error correction capacity is user-selectable.
 
 
 %files
-%defattr(-,root,root)
 %{_bindir}/dvdisaster*
 %doc CHANGELOG COPYING CREDIT* README* TODO INSTALL documentation
 %{_mandir}/man?/%{name}*
 %{_mandir}/*/man?/%{name}*
 %{_datadir}/locale/*/LC_MESSAGES/*
+
 

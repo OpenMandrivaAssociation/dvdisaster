@@ -1,2 +1,4 @@
+removed_sources:
+  dvdisaster-0.72.4.tar.bz2: 2b47fb5a5535d90641f24a599cd8ae8ffd86b972
 sources:
-  "dvdisaster-0.72.4.tar.bz2": 2b47fb5a5535d90641f24a599cd8ae8ffd86b972
+  dvdisaster-0.79.3.tar.bz2: cfa5c16d75036081b2856f1e84d04ca0f35c2656
