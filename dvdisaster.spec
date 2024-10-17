@@ -4,7 +4,7 @@ Version:	0.72.4
 Release:	3
 License:	GPLv2
 Group:		Archiving/Backup
-URL:		http://dvdisaster.net/
+URL:		https://dvdisaster.net/
 Source0:	http://dvdisaster.net/downloads/%{name}-%{version}.tar.bz2
 BuildRequires:	gettext-devel
 BuildRequires:	pkgconfig(glib-2.0)
